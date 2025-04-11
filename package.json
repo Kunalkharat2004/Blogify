@@ -1,5 +1,5 @@
 {
-  "name": "youtube-blog",
+  "name": "blogify",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -13,11 +13,13 @@
   },
   "license": "ISC",
   "dependencies": {
+    "cloudinary": "^2.6.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
+    "mongodb": "^6.15.0",
     "mongoose": "^6.9.1",
     "multer": "^1.4.5-lts.1"
   },

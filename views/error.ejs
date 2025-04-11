@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>Error - Blogify</title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+
+    <div class="container">
+      <div class="auth-container text-center">
+        <h2 class="text-danger mb-4">Error</h2>
+        <p class="mb-4"><%= message %></p>
+        <a href="/" class="btn btn-primary">Return Home</a>
+      </div>
+    </div>
+
+    <%- include('./partials/scripts') %>
+  </body>
+</html> 
