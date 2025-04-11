@@ -28,6 +28,43 @@ body {
   color: white !important;
 }
 
+.navbar .profile-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: var(--transition);
+}
+
+.navbar .nav-link:hover {
+  color: white !important;
+}
+
+.navbar .dropdown-toggle::after {
+  margin-left: 0.5rem;
+}
+
+.navbar .dropdown-menu {
+  border: none;
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
+}
+
+.navbar .dropdown-item {
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+
+.navbar .dropdown-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
 /* Form Styles */
 .auth-container {
   max-width: 400px;
