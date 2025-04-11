@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>Blogify - Share your stories with the world</title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+
+    <div class="container py-5">
+      <div class="row g-4">
+        <% blogs.forEach(blog => { %>
+        <div class="col-md-6 col-lg-4">
+          <div class="blog-card">
+            <img src="<%= blog.coverImageURL %>" class="card-img-top" alt="<%= blog.title %>" />
+            <div class="card-body">
+              <h5 class="card-title"><%= blog.title %></h5>
+              <div class="profile-section mb-3">
+                <img src="<%= blog.createdBy.profileImageURL %>" class="profile-image" alt="<%= blog.createdBy.fullName %>" />
+                <div>
+                  <h6 class="mb-0"><%= blog.createdBy.fullName %></h6>
+                  <small class="text-muted"><%= new Date(blog.createdAt).toLocaleDateString() %></small>
+                </div>
+              </div>
+              <a href="/blog/<%= blog._id %>" class="btn btn-primary w-100">Read More</a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+
+    <%- include('./partials/scripts') %>
+  </body>
+</html>
